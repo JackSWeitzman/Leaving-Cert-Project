@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Linking Font Type, Sizes and Weight From Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Links Style Sheets -->
+    <link rel="stylesheet" href="CSS/general.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- Website Tab Title -->
+    <title>Door Alarm</title>
+</head>
+
+<!-- Website Header -->
+<header class="header">
+    <a href="index.html">
+    <img class="logo" alt="Company logo" src="Images/Logo/SAFE logo.png">
+    </a>
+    <!-- Primary Navigation Menu -->
+    <nav class="main-nav">
+        <!-- List -->
+        <ul class="main-nav-list">
+            <!-- Links -->
+            <li><a class="main-nav-link" href="index.html">Home</a></li>
+            <li><a class="main-nav-link" href="the product.html">The Product</a></li>
+            <li><a class="main-nav-link" href="how it works.html">How It Works</a></li>
+            <li><a class="main-nav-link" href="live feed.html">Live Feed</a></li>
+            <li><a class="main-nav-link nav-cta" href="sign up.html">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Signup Menu -->
+<body class="body-signup">
+    <section class="signup-section">
+        <h1 class="signup-heading">Sign Up For Newsletter</h1>
+            <!-- Name Text Box -->
+            <div class="signup-txt-field">
+                <input type="txt" id="name">
+                <span></span>
+                <label>Full Name:</label>
+            </div>
+            <!-- Email Text Box -->
+            <div class="signup-txt-field">
+                <input type="email" id="email" name="email"
+                pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email">
+                <span></span>
+                <label>Email:</label>
+            </div>
+            <!-- Submit Button/Input -->
+            <div class="txt-field">
+                <button id="submitBtn" required>Sign Up</button>
+            </div>
+    </section>
+    
+</body>
+<!-- JavaScript Code -->
+<script type="module">
+	// Import the functions you need from the SDKs you need
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js";
+
+	// Configuring Firebase for page //
+    // Links my FireBase to the website //
+	const firebaseConfig = {
+        apiKey: "AIzaSyBNCHBlQ33cSS2PGQDlnJu2RPcYLyAYeSU",
+        authDomain: "lccs-project-2557f.firebaseapp.com",
+        databaseURL: "https://lccs-project-2557f-default-rtdb.firebaseio.com",
+        projectId: "lccs-project-2557f",
+        storageBucket: "lccs-project-2557f.appspot.com",
+        messagingSenderId: "278365208418",
+        appId: "1:278365208418:web:50b1b4584bff6c2928363b",
+        measurementId: "G-PK210HMWHZ"
+	};
+
+	// Initialize Firebase //
+	const app = initializeApp(firebaseConfig);
+
+
+	import{getDatabase, ref, set}
+	from "https://www.gstatic.com/firebasejs/9.6.5/firebase-database.js";
+
+	const db =getDatabase();
+
+ // Creating variables //
+	var email= document.getElementById("email");
+    var name= document.getElementById("name")
+	var submitBtn = document.getElementById("submitBtn");
+
+
+ // CheckData() checks if user has filled all fields before executing InsertData() //
+	function CheckData(){
+		if (email.value != ""){
+			InsertData();
+		}else {
+			alert("Do Not Leave Blank Spaces");
+		}
+	}
+
+ // InsertData() inserts inputted data to Firebase & checks if email is valid //
+	function InsertData(){
+		if (email.value.indexOf('@') > -1 && email.value.indexOf('.') > -1){
+			set(ref(db,"UserData/Data " + name.value),{
+                Name : name.value,
+                Email: email.value,
+				})
+				.then(()=>{
+					alert("Thank you for signing up!");
+				})
+				.catch((error)=>{
+					 alert("unsuccessful, error"+error);
+					 });
+				 } else{
+					 alert("Email is invalid")
+				 }
+	}
+        // When the button with the id 'submitBtn' is clicked it runs the function 'CheckData()'
+		submitBtn.addEventListener('click',CheckData);
+</script>
+</html>
