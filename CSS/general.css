@@ -1,0 +1,149 @@
+/* Sets defaults for the HTML */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Sets font-size for all the HTML */
+html {
+    font-size: 62.5%;
+}
+
+/* Sets font-family for all text as Rubik with back-up as Sans seriff, text color, font weight and line height */
+body {
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+}
+
+/**************************************/
+/* GENERAL COMPONENTS */
+/**************************************/
+
+/* Creates a container */
+.container{
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+/* Creates a grid */
+.grid{
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+}
+
+/* Creates a 2 column grid */
+.grid-2-cols{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Creates a 3 column grid */
+.grid-3-cols{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Creates a 4 column grid */
+.grid-4-cols{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Creates a 5 column grid */
+.grid-5-cols{
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* Centers items */
+.grid-center-v{
+    align-items: center;
+}
+
+/* Sets style of primary, secondary and tertiary headings */
+.heading-primary,
+.heading-secondary,
+.heading-tertiary{
+    font-weight: 700;
+    color: #333;
+    letter-spacing: -0.5px;
+}
+
+/* Sets style of primary headings */
+.heading-primary{   
+    font-size: 5.2rem;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+}
+
+/* Sets style of secondary headings */
+.heading-secondary{
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+}
+
+/* Sets style of tertiary headings */
+.heading-tertiary{
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+}
+
+/* Sets style of subheadings */
+.subheading{
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #cf711f;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+}
+
+/* Sets style for when the button is clicked on / visited */
+.button:link, 
+.button:visited{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #e67e22 ; 
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+    transition: background-color 0.3s;
+}
+
+/* Sets style for when the button is clicked on / visited */
+.button-full:link, 
+.button-full:visited{   
+    background-color: #e67e22 ;
+    color: #fff
+}
+
+/* Sets style for when the button is hovered on / active */
+.button-full:hover, 
+.button-full:active{   
+    background-color: #cf711f ;
+}
+
+/* Sets style for when the button is clicked on / visited */
+.button-outline:link, 
+.button-outline:visited{
+    background-color: #fff ;
+    color: #555;
+}
+
+/* Sets style for when the button is hovered on / active */
+.button-outline:hover, 
+.button-outline:active{
+    background-color: #fdf2e9 ;
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+/* Creates a slight margin to the right and makes it a priority style by adding !important */
+.margin-right-small{
+    margin-right: 1.6rem !important;
+}

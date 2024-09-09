@@ -1,0 +1,464 @@
+
+/**************************************/
+/* NAVIGATION */
+/**************************************/
+
+/* Sets style for header navigation */
+.main-nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+/* Sets style for header navigation links when clicked on / visted */
+.main-nav-link:link,
+.main-nav-link:visited{
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+}
+
+/* Sets style for header navigation links when hovered on / active */
+.main-nav-link:hover,
+.main-nav-link:active{
+    color: #cf711f;
+}
+
+/* Sets style for header navigation links with 'nav-cta' when clicked on / visted */
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited{
+    padding: 1.2rem 2.4rem;
+    border-radius: 9px;
+    color: #fff;
+    background: #e67e22;
+}
+
+/* Sets style for header navigation links with 'nav-cta' when hovered on / active */
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active{
+    background: #cf711f;
+}
+
+/* Sets background color */
+.current-page{
+    color: aqua;
+}
+
+/**************************************/
+/* HEADER */
+/**************************************/
+
+/* Sets style for 'header' section */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdf2e9 ;
+    height: 9.6rem;
+    padding: 0 4.8rem;
+}
+
+/* Sets style for company logo */
+.logo{
+    height: 4rem;
+}
+
+/**************************************/
+/* HERO SECTION */
+/**************************************/
+
+/* Sets style for 'hero' section */
+.section-hero{
+    background-color: #fdf2e9;
+    padding: 4.8rem 0 9.6rem 0;
+}
+
+/* Sets style for hero area and items */
+.hero{
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9.6rem;
+    align-items: center;
+}
+
+/* Sets style for hero description */
+.hero-description{
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+}
+
+/* Sets style for hero image */
+.hero-image{
+    width: 100%;
+}
+
+/* Sets style for customer sold products area */
+.sold-products{
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-top: 8rem;
+}
+
+/* Sets display of items in 'customer-images' to flex */
+.customer-images{
+    display: flex;
+}
+
+/* Sets style for customer images*/
+.customer-images img{
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+    margin-right: -1.6rem;
+    border: 0.3rem solid #fdf2e9;
+}
+
+/* Sets style for last item in 'customer-images' */
+.customer-images img:last-child{
+    margin: 0;
+}
+
+/* Sets style for 'sold-text'*/
+.sold-text{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Sets style for text with 'sold-text' span */
+.sold-text span{
+    color: #cf711f;
+    font-weight: 700;
+}
+/**************************************/
+/* FEATURED IN SECTION */
+/**************************************/
+
+/* Sets style for featured in section */
+.section-featured{
+    padding: 4.8rem 0 3.2rem 0;
+}
+
+/* Sets style for 'featured in' section heading */
+.heading-featured-in{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    color: #888;
+}
+
+/* Sets display for items in 'logos' to flex and justifies their content leave space around them */
+.logos{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Sets style for featured in company logos */
+.logos img{
+    height: 3.2rem;
+    filter: brightness(0);
+    opacity: 50%;
+}
+
+/**************************************/
+/* HOW IT WORKS SECTION */
+/**************************************/
+
+/* Sets style for 'how it works' section*/
+.section-how{
+    padding: 9.6rem 0 12.8rem 0;
+}
+
+/* Sets style for the step number */
+.step-number{
+    font-size: 8.6rem;
+    font-weight: 600;
+    color: #ddd;
+    margin-bottom: 1.2rem;
+}
+
+/* Sets style for description of each step */
+.step-description{
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+/* Sets style for image container */
+.step-image-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles 2 boxes into circles */
+.step-image-box::before,
+.step-image-box::after{
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Creates a circle on -2 layer behind each image */
+.step-image-box::before{
+    width: 73%;
+    padding-bottom: 73%;
+    background-color: #fdf2e9;
+    z-index: -2;
+} 
+
+/* Creates a circle on -1 layer behind each image */
+ .step-image-box::after{
+     width: 65%;
+     padding-bottom: 65%;
+     background-color: #fae5d3;
+     z-index: -1;
+ }
+
+ /* Sets style for images */
+.step-image {
+    width: 55%;
+}
+/**************************************/
+/* THE PRODUCT SECTION */
+/**************************************/
+
+/* Sets style for 'the product' section */
+.section-product{
+    padding: 9.6rem 0 12.8rem 0;
+}
+
+/* Sets style for demo video */
+.demo-video{
+    display: block;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+/**************************************/
+/* LIVE FEED SECTION */
+/**************************************/
+
+/* Sets padding for 'live feed' section */
+.section-feed{
+    padding: 9.6rem 0 12.8rem 0;
+}
+
+/**************************************/
+/* NEWSLETTER SIGN UP SECTION */
+/**************************************/
+
+/* Sets style for the body of the 'newsletter sign up' section */
+.body-signup{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../Images/BackgroundImages/LoginBackgroundImage.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+
+  }
+
+/* Sets style for 'newsletter sign up' section */
+.signup-section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40rem;
+    background: #ffedcc;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 1.5rem rgba(0,0,0,0.05);
+  }
+
+/* Sets style for h1's in 'signup-section' */
+.signup-section h1{
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid silver;
+  }
+
+/* Sets more style for 'newsletter sign up' section */
+.signup-section{
+    padding: 0 4rem;
+    box-sizing: border-box;
+  }
+/* Sets style for text fields*/
+  .signup-txt-field{
+    position: relative;
+    border-bottom: 0.2rem solid #adadad;
+    margin: 3rem 0;
+  }
+
+/* Sets style for text fields inputs*/
+.signup-txt-field input{
+    width: 100%;
+    padding: 0 0.5rem;
+    height: 4rem;
+    font-size: 1.6rem;
+    border: none;
+    background: none;
+    outline: none;
+  }
+
+/* Sets default style for text fields labels */
+.signup-txt-field label{
+    position: absolute;
+    left: 0rem;
+    top: 50%;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+/* Sets style for spans */
+.signup-txt-field span::before{
+    content: '';
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 0%;
+    height: 0.2rem;
+    background: #ff7e00;
+  }
+
+/* Sets style for text field labels if user is currently focused on text field / input is valid */
+.signup-txt-field input:focus ~ label,
+.signup-txt-field input:valid ~ label{
+    top: -0.5rem;
+    color: #ff7e00;
+  }
+
+/* Sets style for text field labels if input is invalid */
+.signup-txt-field input:invalid ~ label{
+    top: -0.5rem;
+    color: red;
+  }
+
+/* Sets style for text field spans if user is currently focused on text field / input is valid */
+.signup-txt-field input:focus ~ span::before,
+.signup-txt-field input:valid ~ span::before{
+    width: 100%;
+  }
+
+/* Sets style for submit button */
+.signup-section button{
+    transform: translate(3rem);
+    width: 80%;
+    height: 5rem;
+    border: 0.1rem solid;
+    background: #ff7e00;
+    border-radius: 2.5rem;
+    font-size: 1.8rem;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 2rem;
+}
+
+/**************************************/
+/* FOOTER SECTION */
+/**************************************/
+
+/* Sets style for 'footer' section */
+.footer{
+    padding: 12.8rem 0;
+    border-top: 1px solid #eee;
+}
+
+/* Creates a grid with 5 columns of varying length for the footer */
+.grid-footer{
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+/* Sets style for column with the logo */
+.logo-col{
+    display: flex;
+    flex-direction: column
+}
+
+/* Sets style for logo */
+.footer-logo{
+    display: block;
+    margin-bottom: 3.2rem;
+}
+
+/* Sets style for copyright text */
+.copyright{
+    font-size: 1.4rem;
+    color: #767676;
+    line-height: 1.6;
+    margin-top: auto;
+}
+
+/* Sets style for footer headings */
+.footer-heading{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+
+/* Sets style for contact info */
+.contact-info{
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+/* Sets style for address */
+.address{
+    margin-bottom: 2.4rem;
+}
+
+/* Sets style for footer navigation (made up of lists) */
+.footer-nav{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+}
+
+/* Sets style for each navigation link when clicked on / visited */
+.footer-link:link,
+.footer-link:visited{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #767676;
+    transition: all 0.3s;
+}
+
+/* Sets style for each navigation link when hovered on / active */
+.footer-link:hover,
+.footer-link:active{
+    color: #555;
+}
+
+/* Sets style for accessibility buttons in footer */
+.footer-button{
+    font-family: "Rubik", sans-serif;
+    font-size: 1.6rem;
+    color: #767676;
+    outline: none;
+    border: none;
+}
